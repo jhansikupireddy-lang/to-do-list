@@ -1,17 +1,14 @@
-# To-Do List App
+# To-Do List App - Setup Guide
 
-A modern, full-featured to-do list application built with React, TypeScript, and Tailwind CSS.
+## 📋 Project Overview
 
-## 📋 Overview
-
-This project is a sleek and responsive to-do list application designed with modern web technologies:
-
-- **Frontend Framework**: React 18+ with TypeScript
+This is a modern React + TypeScript to-do list application built with:
+- **Framework**: React with TypeScript
 - **Package Manager**: Bun
 - **UI Components**: shadcn/ui
 - **Styling**: Tailwind CSS
 - **Routing**: React Router
-- **Build Tool**: Vite
+- **Build Tool**: Vite (implied by Bun)
 
 ## 🚀 Quick Start
 
@@ -19,12 +16,11 @@ This project is a sleek and responsive to-do list application designed with mode
 - [Bun](https://bun.sh) installed (latest version)
 - Node.js 18+ (optional, Bun is recommended)
 
-### Installation
+### Installation Steps
 
-1. **Clone the repository** (or extract if using ZIP)
+1. **Extract the ZIP file**
    ```bash
-   git clone <repository-url>
-   cd to-do-list
+   unzip todo-list-app.zip
    ```
 
 2. **Install dependencies**
@@ -36,7 +32,8 @@ This project is a sleek and responsive to-do list application designed with mode
    ```bash
    bun run dev
    ```
-   The app will be available at `http://localhost:5173`
+
+   The app will be available at `http://localhost:5173` (or the port shown in terminal)
 
 4. **Build for production**
    ```bash
@@ -59,14 +56,16 @@ src/
 │       ├── button.tsx
 │       ├── calendar.tsx
 │       ├── checkbox.tsx
+│       ├── command.tsx
 │       ├── dropdown-menu.tsx
 │       ├── form.tsx
-│       ├── input.tsx
+│       ├── input-otp.tsx
 │       ├── label.tsx
 │       ├── menubar.tsx
 │       ├── pagination.tsx
 │       ├── popover.tsx
 │       ├── progress.tsx
+│       ├── radio-group.tsx
 │       ├── sheet.tsx
 │       ├── skeleton.tsx
 │       ├── sonner.tsx       # Toast notifications
@@ -94,71 +93,55 @@ src/
 | `bun lint` | Run ESLint |
 | `bun format` | Format code (if configured) |
 
-## 🔧 Configuration
+## 🔧 Configuration Files
 
 - **tsconfig.json** - TypeScript configuration
 - **eslint.config.js** - ESLint rules and settings
 - **package.json** - Dependencies and scripts
-- **vite.config.ts** - Vite build configuration
 
-## 📦 Tech Stack
+## 📦 Key Dependencies
 
-### Core Dependencies
-- **React Router** - Client-side routing and navigation
-- **shadcn/ui** - High-quality, customizable component library
-- **Tailwind CSS** - Utility-first CSS framework
+### UI & Styling
+- React Router - Client-side routing
+- shadcn/ui - Component library
+- Tailwind CSS - Utility-first CSS
 
-### Development Tools
-- **TypeScript** - Static type checking and better IDE support
-- **ESLint** - Code quality and style consistency
-- **Vite** - Lightning-fast build tool and dev server
+### Developer Tools
+- TypeScript - Type safety
+- ESLint - Code linting
+- Vite - Build tool
 
 ## 🐛 Troubleshooting
 
 ### Port already in use
-If port 5173 is busy, Vite will automatically use the next available port. Check your terminal output for the correct URL.
+If port 5173 is busy, Vite will use the next available port. Check the terminal output.
 
-### Dependencies installation issues
+### Dependencies not installing
 ```bash
 rm -rf node_modules bun.lockb
 bun install
 ```
 
 ### TypeScript errors
-Verify your TypeScript configuration:
+Make sure your IDE recognizes the TypeScript config:
 ```bash
 bun exec tsc --noEmit
 ```
 
-## ✨ Features
+## 📝 Notes
 
-- ✅ Create and manage to-do items
-- ✅ Mark tasks as complete
-- ✅ Delete tasks
-- ✅ Responsive design for mobile and desktop
-- ✅ Modern UI with shadcn/ui components
-- ✅ Type-safe development with TypeScript
-- ✅ Hot module reloading during development
-
-## 📝 Development Notes
-
-- The app uses React 18+ features and hooks
-- All components follow React best practices
-- shadcn/ui components are fully customizable via Tailwind CSS
-- Mobile-responsive design implemented with the `use-mobile` hook
-- ESLint is configured to maintain code quality
+- The app uses React 18+ features
+- Components follow React best practices
+- shadcn/ui components are fully customizable via Tailwind
+- Mobile-responsive design with `use-mobile` hook
 
 ## 🤝 Contributing
 
 1. Create a feature branch: `git checkout -b feature/your-feature`
-2. Make your changes and test locally with `bun run dev`
-3. Run linting to ensure code quality: `bun lint`
-4. Build to verify production compatibility: `bun run build`
-5. Push your changes and create a pull request
-
-## 📄 License
-
-[Add your license information here]
+2. Make your changes
+3. Test locally with `bun run dev`
+4. Build to verify: `bun run build`
+5. Push and create a pull request
 
 ---
 
